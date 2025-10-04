@@ -1,0 +1,40 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.form-container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.path-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.level-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 220px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
