@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import ResumeAnalyzer from "./pages/ResumeAnalyzer";
-import CourseRecommender from "./pages/CourseRecommender";
+import CourseRecommendation from "./pages/CourseRecommendation";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/resume" element={<ResumeAnalyzer />} />
-        <Route path="/courses" element={<CourseRecommender />} />
+        <Route path="/courses" element={<CourseRecommendation/>} />
       </Routes>
       <Footer />
     </Router>

@@ -11,8 +11,12 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      const res = await axios.post("http://localhost:5000/api/auth/login", {
+        email,
+        password
+      });
       localStorage.setItem("token", res.data.token);
+      localStorage.setItem("role", res.data.user.role);
       navigate("/dashboard");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
@@ -22,10 +26,11 @@ function Login() {
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <h2>Login</h2>
-      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+      <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
       <button type="submit">Login</button>
     </form>
   );
 }
+
 export default Login;

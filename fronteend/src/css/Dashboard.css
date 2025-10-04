@@ -1,1 +1,124 @@
-.dashboard { text-align: center; margin-top: 100px; font-size: 26px; color: green; }
+/* 🌙 Minimal Dark Theme */
+body {
+  background: #0e0e10;
+  color: #e4e4e7;
+  font-family: "Inter", "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dash-dark {
+  min-height: 100vh;
+  padding: 40px;
+  color: #e4e4e7;
+}
+
+/* Header */
+.dash-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* Summary Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #1c1c1f;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
+}
+
+.card span {
+  display: block;
+  font-size: 1.8rem;
+  color: #3b82f6;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Charts Section */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.chart-box {
+  background: #1a1a1d;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.chart-box:hover {
+  border-color: #3b82f6;
+}
+
+.chart-box h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f3f4f6;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Chart Tooltip (Recharts default override) */
+.recharts-tooltip-wrapper {
+  background: #1c1c1f !important;
+  color: #f3f4f6 !important;
+  border-radius: 8px;
+  padding: 8px 12px !important;
+  font-size: 0.85rem;
+}
+
+/* Table Section (if needed) */
+.ats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ats-table th,
+.ats-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #27272a;
+}
+
+.ats-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  border-bottom: 1px solid #3b82f6;
+}
+
+.ats-table tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+  transition: background 0.3s;
+}
+
+/* Chart box transitions */
+.chart-box,
+.card {
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}

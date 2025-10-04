@@ -5,6 +5,8 @@ const connectDB = require("./config/db.js");
 const authRoutes = require("./routes/authRoutes.js");
 const resumeRoutes = require("./routes/resumeRoutes.js");
 const courseRoutes = require("./routes/courseRoutes.js");
+const analyticsRoutes = require("./routes/analyticsRoutes.js");
+const profileRoutes = require("./routes/profileRoutes.js");
 
 dotenv.config();
 connectDB();
@@ -13,9 +15,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use("/api/analytics", analyticsRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/profile", profileRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

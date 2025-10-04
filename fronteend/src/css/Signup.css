@@ -1,2 +1,8 @@
-.signup-form { display: flex; flex-direction: column; width: 300px; margin: 100px auto; }
-.signup-form input, .signup-form button { margin: 10px 0; padding: 10px; }
+.role-select {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+.role-select label {
+  cursor: pointer;
+}
