@@ -1,0 +1,2 @@
+.login-form { display: flex; flex-direction: column; width: 300px; margin: 100px auto; }
+.login-form input, .login-form button { margin: 10px 0; padding: 10px; }
