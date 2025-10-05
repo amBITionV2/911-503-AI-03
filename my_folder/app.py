@@ -231,3 +231,9 @@ def get_learning_path(req: LearningPathRequest):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+
+
+#resume
+
